@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'eth'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile "com.madgag.spongycastle:core:1.53.0.0" // for SHA3 and SECP256K1
+    compile "com.madgag.spongycastle:prov:1.53.0.0" // for SHA3 and SECP256K1
+    compile 'com.google.guava:guava:22.0'
+    compile 'org.slf4j:slf4j-api:1.7.20'
+    compile "org.apache.commons:commons-collections4:4.0"
+    compile "org.apache.commons:commons-lang3:3.4"
+    compile "com.fasterxml.jackson.core:jackson-databind:2.5.1"
+}
